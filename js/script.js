@@ -12,12 +12,11 @@ xhr.open(
     true
     );
     xhr.onload = function () {
-    // Grab the news container
-    let breakingNews = document.getElementById("breakingNews");
-    let json = JSON.parse(this.responseText);
-    let articles = json.articles;
-    let news = "";
-    
+        // Grab the news container
+        let breakingNews = document.getElementById("breakingNews");
+        let json = JSON.parse(this.responseText);
+        let articles = json.articles;
+        let news = "";
     articles.forEach(element => {
         news += `<div class="my-2 mx-2 ">
                     <div class="card" id="articlesCard">
@@ -35,6 +34,7 @@ xhr.open(
                     </div>
                 </div>`;
     })  ;
+
     breakingNews.innerHTML = news;
 };
 
