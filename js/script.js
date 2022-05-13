@@ -17,6 +17,7 @@ xhr.open(
         let json = JSON.parse(this.responseText);
         let articles = json.articles;
         let news = "";
+        console.log(articles)
     articles.forEach(element => {
         news += `<div class="my-2 mx-2 ">
                     <div class="card" id="articlesCard">
